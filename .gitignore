@@ -1,0 +1,11 @@
+# Environment variables (contains sensitive Gemini API key)
+.env
+
+# SQLite local database
+*.db
+
+# Python bytecode and temporary files
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
