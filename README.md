@@ -96,7 +96,7 @@ pip install streamlit pandas google-genai python-dotenv
 Create a `.env` file in the project root directory and add your Gemini API key:
 
 ```env
-GEMINI_API_KEY=your_actual_api_key_here
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 ```
 
 ### 4. Run the Application
@@ -107,21 +107,25 @@ Launch the Streamlit dashboard:
 streamlit run app.py
 ```
 
-
+---
 
 ## Project Structure
 
 ```text
 AI-CSV-Data-Analyzer/
 │
-├── app.py                 # Main Streamlit application
-├── database.py            # SQLite database operations
-├── data_processing.py     # Data cleaning and statistical analysis
-├── ai_generation.py       # Gemini AI integration and prompt handling
-├── history.db             # Local database storage
-├── .env                   # Environment variables
-└── README.md              # Project documentation
+├── app.py               # Main Streamlit application
+├── employees.csv        # Sample dataset
+├── .env.example         # Environment variable template
+├── .gitignore           # Git ignore configuration
+└── README.md            # Project documentation
 ```
+
+
+
+## Sample Dataset
+
+The repository includes a sample dataset (`employees.csv`) that can be used to test the application's data cleaning, statistical analysis, and AI-powered insight generation features.
 
 
 
@@ -130,32 +134,16 @@ AI-CSV-Data-Analyzer/
 1. User uploads a CSV file.
 2. Dataset is cleaned using the selected preprocessing method.
 3. Statistical summaries are generated using Pandas.
-4. Dataset metadata and sample records are sent to Gemini AI.
-5. AI-generated insights are displayed to the user.
-6. Results are saved automatically to the SQLite database.
-7. Previous analyses can be viewed through the history panel.
-
-
-
-## Use Cases
-
-* Academic and research projects
-* Business data exploration
-* Customer and sales data analysis
-* Data science learning and experimentation
-* Rapid dataset profiling
-* Preliminary exploratory data analysis
+4. Dataset information and sample records are analyzed.
+5. Gemini AI generates insights, observations, and recommendations.
+6. Results are displayed through the Streamlit dashboard.
+7. Analysis history is stored locally and can be accessed later.
 
 
 
 ## Security Considerations
 
 * API keys are stored securely using environment variables.
+* The `.env` file should never be committed to GitHub.
 * Analysis history remains stored locally on the user's machine.
 * No sensitive credentials are hardcoded into the application.
-
-
-
-## Author
-
-Developed using Python, Streamlit, Pandas, SQLite, and Google Gemini AI to make data analysis more accessible, efficient, and insightful.
